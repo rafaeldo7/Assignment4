@@ -1,0 +1,57 @@
+{
+  "directed": true,
+  "n": 7,
+  "edges": [
+    {
+      "u": 0,
+      "v": 2,
+      "w": 8
+    },
+    {
+      "u": 0,
+      "v": 4,
+      "w": 3
+    },
+    {
+      "u": 0,
+      "v": 5,
+      "w": 7
+    },
+    {
+      "u": 1,
+      "v": 2,
+      "w": 1
+    },
+    {
+      "u": 1,
+      "v": 3,
+      "w": 5
+    },
+    {
+      "u": 1,
+      "v": 5,
+      "w": 1
+    },
+    {
+      "u": 2,
+      "v": 4,
+      "w": 7
+    },
+    {
+      "u": 3,
+      "v": 6,
+      "w": 7
+    },
+    {
+      "u": 5,
+      "v": 6,
+      "w": 9
+    }
+  ],
+  "source": 2,
+  "weight_model": "edge",
+  "description": "Small DAG (7 nodes, sparse)",
+  "density": "sparse",
+  "cyclic": false,
+  "multi_scc": false
+}
