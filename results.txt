@@ -1,0 +1,283 @@
+=== large_1.json ===
+SCC count=22, time(ns)=629900
+Comp 0 size=1 nodes=[8]
+Comp 1 size=1 nodes=[6]
+Comp 2 size=1 nodes=[10]
+Comp 3 size=1 nodes=[14]
+Comp 4 size=1 nodes=[9]
+Comp 5 size=1 nodes=[3]
+Comp 6 size=1 nodes=[7]
+Comp 7 size=1 nodes=[1]
+Comp 8 size=1 nodes=[4]
+Comp 9 size=1 nodes=[0]
+Comp 10 size=1 nodes=[2]
+Comp 11 size=1 nodes=[12]
+Comp 12 size=1 nodes=[16]
+Comp 13 size=1 nodes=[5]
+Comp 14 size=1 nodes=[11]
+Comp 15 size=1 nodes=[17]
+Comp 16 size=1 nodes=[13]
+Comp 17 size=1 nodes=[18]
+Comp 18 size=1 nodes=[20]
+Comp 19 size=1 nodes=[15]
+Comp 20 size=1 nodes=[19]
+Comp 21 size=1 nodes=[21]
+Condensation nodes=22
+Topological order: [0, 1, 5, 7, 9, 2, 4, 6, 8, 10, 3, 11, 13, 12, 14, 16, 15, 17, 19, 18, 20, 21]
+Shortest distances from comp 11:
+  comp 0 -> Infinity
+  comp 1 -> Infinity
+  comp 2 -> Infinity
+  comp 3 -> Infinity
+  comp 4 -> Infinity
+  comp 5 -> Infinity
+  comp 6 -> Infinity
+  comp 7 -> Infinity
+  comp 8 -> Infinity
+  comp 9 -> Infinity
+  comp 10 -> Infinity
+  comp 11 -> 0,00
+  comp 12 -> 4,00
+  comp 13 -> Infinity
+  comp 14 -> Infinity
+  comp 15 -> Infinity
+  comp 16 -> Infinity
+  comp 17 -> 11,00
+  comp 18 -> 15,00
+  comp 19 -> Infinity
+  comp 20 -> Infinity
+  comp 21 -> 4,00
+Critical (longest) path value: 23.0
+Component path: [11, 12, 17, 18, 21]
+Metrics: time(ns)=629900, dfs=44, edges=78, pushes=22, pops=22, relax=10, checks=12
+
+=== large_2.json ===
+SCC count=2, time(ns)=62600
+Comp 0 size=1 nodes=[11]
+Comp 1 size=29 nodes=[0, 2, 1, 3, 5, 4, 6, 10, 9, 14, 18, 19, 13, 17, 7, 16, 15, 20, 21, 25, 12, 22, 26, 8, 29, 23, 27, 24, 28]
+Condensation nodes=2
+Topological order: [0, 1]
+Shortest distances from comp 1:
+  comp 0 -> Infinity
+  comp 1 -> 0,00
+Critical (longest) path value: 0.0
+Component path: []
+Metrics: time(ns)=62600, dfs=60, edges=216, pushes=2, pops=2, relax=0, checks=0
+
+=== large_3.json ===
+SCC count=45, time(ns)=178500
+Comp 0 size=1 nodes=[3]
+Comp 1 size=1 nodes=[6]
+Comp 2 size=1 nodes=[4]
+Comp 3 size=1 nodes=[1]
+Comp 4 size=1 nodes=[0]
+Comp 5 size=1 nodes=[5]
+Comp 6 size=1 nodes=[7]
+Comp 7 size=1 nodes=[9]
+Comp 8 size=1 nodes=[11]
+Comp 9 size=1 nodes=[2]
+Comp 10 size=1 nodes=[8]
+Comp 11 size=1 nodes=[12]
+Comp 12 size=1 nodes=[13]
+Comp 13 size=1 nodes=[17]
+Comp 14 size=1 nodes=[10]
+Comp 15 size=1 nodes=[16]
+Comp 16 size=1 nodes=[14]
+Comp 17 size=1 nodes=[15]
+Comp 18 size=1 nodes=[19]
+Comp 19 size=1 nodes=[18]
+Comp 20 size=1 nodes=[20]
+Comp 21 size=1 nodes=[23]
+Comp 22 size=1 nodes=[24]
+Comp 23 size=1 nodes=[22]
+Comp 24 size=1 nodes=[21]
+Comp 25 size=1 nodes=[25]
+Comp 26 size=1 nodes=[28]
+Comp 27 size=1 nodes=[35]
+Comp 28 size=1 nodes=[26]
+Comp 29 size=1 nodes=[27]
+Comp 30 size=1 nodes=[29]
+Comp 31 size=1 nodes=[30]
+Comp 32 size=1 nodes=[33]
+Comp 33 size=1 nodes=[31]
+Comp 34 size=1 nodes=[32]
+Comp 35 size=1 nodes=[34]
+Comp 36 size=1 nodes=[36]
+Comp 37 size=1 nodes=[37]
+Comp 38 size=1 nodes=[38]
+Comp 39 size=1 nodes=[40]
+Comp 40 size=1 nodes=[42]
+Comp 41 size=1 nodes=[39]
+Comp 42 size=1 nodes=[41]
+Comp 43 size=1 nodes=[44]
+Comp 44 size=1 nodes=[43]
+Condensation nodes=45
+Topological order: [0, 3, 4, 1, 2, 5, 9, 6, 10, 7, 14, 8, 16, 11, 12, 13, 15, 17, 18, 19, 20, 21, 23, 24, 22, 25, 26, 28, 27, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 41, 40, 42, 43, 44]
+Shortest distances from comp 18:
+  comp 0 -> Infinity
+  comp 1 -> Infinity
+  comp 2 -> Infinity
+  comp 3 -> Infinity
+  comp 4 -> Infinity
+  comp 5 -> Infinity
+  comp 6 -> Infinity
+  comp 7 -> Infinity
+  comp 8 -> Infinity
+  comp 9 -> Infinity
+  comp 10 -> Infinity
+  comp 11 -> Infinity
+  comp 12 -> Infinity
+  comp 13 -> Infinity
+  comp 14 -> Infinity
+  comp 15 -> Infinity
+  comp 16 -> Infinity
+  comp 17 -> Infinity
+  comp 18 -> 0,00
+  comp 19 -> Infinity
+  comp 20 -> Infinity
+  comp 21 -> 7,00
+  comp 22 -> 15,00
+  comp 23 -> 8,00
+  comp 24 -> Infinity
+  comp 25 -> 15,00
+  comp 26 -> 9,00
+  comp 27 -> 3,00
+  comp 28 -> 11,00
+  comp 29 -> 9,00
+  comp 30 -> 2,00
+  comp 31 -> 4,00
+  comp 32 -> 3,00
+  comp 33 -> 5,00
+  comp 34 -> 9,00
+  comp 35 -> 8,00
+  comp 36 -> 5,00
+  comp 37 -> 6,00
+  comp 38 -> 3,00
+  comp 39 -> 1,00
+  comp 40 -> 3,00
+  comp 41 -> 5,00
+  comp 42 -> 1,00
+  comp 43 -> 4,00
+  comp 44 -> 4,00
+Critical (longest) path value: 88.0
+Component path: [18, 23, 25, 26, 33, 34, 35, 36, 37, 38, 39, 42, 44]
+Metrics: time(ns)=178500, dfs=90, edges=990, pushes=45, pops=45, relax=139, checks=276
+
+=== medium_1.json ===
+SCC count=6, time(ns)=35100
+Comp 0 size=1 nodes=[10]
+Comp 1 size=1 nodes=[8]
+Comp 2 size=7 nodes=[0, 2, 1, 3, 5, 4, 11]
+Comp 3 size=1 nodes=[6]
+Comp 4 size=1 nodes=[9]
+Comp 5 size=1 nodes=[7]
+Condensation nodes=6
+Topological order: [0, 1, 2, 3, 4, 5]
+Shortest distances from comp 4:
+  comp 0 -> Infinity
+  comp 1 -> Infinity
+  comp 2 -> Infinity
+  comp 3 -> Infinity
+  comp 4 -> 0,00
+  comp 5 -> Infinity
+Critical (longest) path value: 0.0
+Component path: []
+Metrics: time(ns)=35100, dfs=24, edges=44, pushes=6, pops=6, relax=0, checks=0
+
+=== medium_2.json ===
+SCC count=15, time(ns)=30500
+Comp 0 size=1 nodes=[8]
+Comp 1 size=1 nodes=[4]
+Comp 2 size=1 nodes=[9]
+Comp 3 size=1 nodes=[2]
+Comp 4 size=1 nodes=[11]
+Comp 5 size=1 nodes=[12]
+Comp 6 size=1 nodes=[1]
+Comp 7 size=1 nodes=[10]
+Comp 8 size=1 nodes=[6]
+Comp 9 size=1 nodes=[0]
+Comp 10 size=1 nodes=[3]
+Comp 11 size=1 nodes=[5]
+Comp 12 size=1 nodes=[7]
+Comp 13 size=1 nodes=[13]
+Comp 14 size=1 nodes=[14]
+Condensation nodes=15
+Topological order: [0, 1, 3, 6, 9, 2, 4, 7, 8, 10, 5, 11, 12, 13, 14]
+Shortest distances from comp 13:
+  comp 0 -> Infinity
+  comp 1 -> Infinity
+  comp 2 -> Infinity
+  comp 3 -> Infinity
+  comp 4 -> Infinity
+  comp 5 -> Infinity
+  comp 6 -> Infinity
+  comp 7 -> Infinity
+  comp 8 -> Infinity
+  comp 9 -> Infinity
+  comp 10 -> Infinity
+  comp 11 -> Infinity
+  comp 12 -> Infinity
+  comp 13 -> 0,00
+  comp 14 -> 7,00
+Critical (longest) path value: 7.0
+Component path: [13, 14]
+Metrics: time(ns)=30500, dfs=30, edges=46, pushes=15, pops=15, relax=2, checks=2
+
+=== medium_3.json ===
+SCC count=1, time(ns)=44100
+Comp 0 size=18 nodes=[0, 3, 1, 2, 5, 4, 8, 11, 7, 9, 17, 16, 12, 10, 13, 14, 15, 6]
+Condensation nodes=1
+Topological order: [0]
+Shortest distances from comp 0:
+  comp 0 -> 0,00
+Critical (longest) path value: 0.0
+Component path: []
+Metrics: time(ns)=44100, dfs=36, edges=152, pushes=1, pops=1, relax=0, checks=0
+
+=== small_1.json ===
+SCC count=1, time(ns)=10900
+Comp 0 size=6 nodes=[0, 1, 4, 5, 3, 2]
+Condensation nodes=1
+Topological order: [0]
+Shortest distances from comp 0:
+  comp 0 -> 0,00
+Critical (longest) path value: 0.0
+Component path: []
+Metrics: time(ns)=10900, dfs=12, edges=24, pushes=1, pops=1, relax=0, checks=0
+
+=== small_2.json ===
+SCC count=7, time(ns)=22500
+Comp 0 size=1 nodes=[1]
+Comp 1 size=1 nodes=[3]
+Comp 2 size=1 nodes=[0]
+Comp 3 size=1 nodes=[5]
+Comp 4 size=1 nodes=[6]
+Comp 5 size=1 nodes=[2]
+Comp 6 size=1 nodes=[4]
+Condensation nodes=7
+Topological order: [0, 2, 1, 3, 5, 4, 6]
+Shortest distances from comp 5:
+  comp 0 -> Infinity
+  comp 1 -> Infinity
+  comp 2 -> Infinity
+  comp 3 -> Infinity
+  comp 4 -> Infinity
+  comp 5 -> 0,00
+  comp 6 -> 7,00
+Critical (longest) path value: 7.0
+Component path: [5, 6]
+Metrics: time(ns)=22500, dfs=14, edges=18, pushes=7, pops=7, relax=2, checks=2
+
+=== small_3.json ===
+SCC count=2, time(ns)=24000
+Comp 0 size=1 nodes=[8]
+Comp 1 size=8 nodes=[0, 2, 1, 4, 5, 7, 3, 6]
+Condensation nodes=2
+Topological order: [0, 1]
+Shortest distances from comp 1:
+  comp 0 -> Infinity
+  comp 1 -> 0,00
+Critical (longest) path value: 0.0
+Component path: []
+Metrics: time(ns)=24000, dfs=18, edges=36, pushes=2, pops=2, relax=0, checks=0
+
