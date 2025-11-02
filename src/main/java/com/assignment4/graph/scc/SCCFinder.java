@@ -1,69 +1,79 @@
-package com.assignment4.graph.scc.src.main.java.com.assignment4.graph.scc;
+package com.assignment4.graph.scc;
+
+import com.assignment4.common.WeightedDirectedGraph;
+import com.assignment4.util.Metrics;
+
 import java.util.*;
 
+/**
+ * Kosaraju implementation for SCC with metrics
+ */
 public class SCCFinder {
+    private final WeightedDirectedGraph G;
     private final int n;
-    private final List<List<Integer>> adj;
+    private List<List<Integer>> adj;
+    private List<List<Integer>> rev;
     private boolean[] visited;
-    private Deque<Integer> stack;
-    private int[] componentId;
-    private List<List<Integer>> components;
+    private Deque<Integer> order;
+    private int[] compId;
+    private Metrics metrics;
 
-    public SCCFinder(List<List<Integer>> adj) {
-        this.n = adj.size();
-        this.adj = adj;
+    public SCCFinder(WeightedDirectedGraph G, Metrics metrics) {
+        this.G = G;
+        this.n = G.getN();
+        this.metrics = metrics;
+        buildAdj();
+    }
+
+    private void buildAdj() {
+        adj = new ArrayList<>();
+        rev = new ArrayList<>();
+        for (int i=0;i<n;i++){ adj.add(new ArrayList<>()); rev.add(new ArrayList<>()); }
+        for (int u=0;u<n;u++){
+            for (var e : G.getAdj().get(u)) {
+                adj.get(u).add(e.to);
+                rev.get(e.to).add(u);
+            }
+        }
     }
 
     public List<List<Integer>> findSCCs() {
         visited = new boolean[n];
-        stack = new ArrayDeque<>();
-
-        // 1️⃣ DFS по исходному графу
-        for (int i = 0; i < n; i++) {
-            if (!visited[i]) dfs1(i);
-        }
-
-        // 2️⃣ Транспонирование графа
-        List<List<Integer>> rev = new ArrayList<>();
-        for (int i = 0; i < n; i++) rev.add(new ArrayList<>());
-        for (int u = 0; u < n; u++)
-            for (int v : adj.get(u))
-                rev.get(v).add(u);
-
-        // 3️⃣ DFS по транспонированному графу (по убыванию времени выхода)
-        Arrays.fill(visited, false);
-        components = new ArrayList<>();
-        componentId = new int[n];
-        int id = 0;
-
-        while (!stack.isEmpty()) {
-            int v = stack.pop();
+        order = new ArrayDeque<>();
+        for (int i=0;i<n;i++) if (!visited[i]) dfs1(i);
+        Arrays.fill(visited,false);
+        List<List<Integer>> comps = new ArrayList<>();
+        compId = new int[n];
+        while (!order.isEmpty()) {
+            int v = order.pop();
             if (!visited[v]) {
                 List<Integer> comp = new ArrayList<>();
-                dfs2(v, rev, comp, id);
-                components.add(comp);
-                id++;
+                dfs2(v, comp);
+                for (int x : comp) compId[x] = comps.size();
+                comps.add(comp);
             }
         }
-        return components;
+        return comps;
     }
 
-    private void dfs1(int v) {
-        visited[v] = true;
-        for (int u : adj.get(v))
-            if (!visited[u]) dfs1(u);
-        stack.push(v);
+    private void dfs1(int v){
+        visited[v]=true;
+        metrics.dfsVisits++;
+        for (int to: adj.get(v)) {
+            metrics.edgesVisited++;
+            if (!visited[to]) dfs1(to);
+        }
+        order.push(v);
     }
-
-    private void dfs2(int v, List<List<Integer>> rev, List<Integer> comp, int id) {
-        visited[v] = true;
+    private void dfs2(int v, List<Integer> comp){
+        visited[v]=true;
+        metrics.dfsVisits++;
         comp.add(v);
-        componentId[v] = id;
-        for (int u : rev.get(v))
-            if (!visited[u]) dfs2(u, rev, comp, id);
+        for (int to: rev.get(v)) {
+            metrics.edgesVisited++;
+            if (!visited[to]) dfs2(to, comp);
+        }
     }
 
-    public int[] getComponentIds() {
-        return componentId;
-    }
+    public int[] getComponentIds(){ return compId; }
 }
